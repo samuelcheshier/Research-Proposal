@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Cancer-A-Gogo Letterhead</title>
+<style>
+@font-face{font-family:CafeMimi;src:url(CafeMimi.otf)}
+@font-face{font-family:'Open Sans';src:url(OpenSans-Regular.ttf);font-weight:400}
+@font-face{font-family:'Open Sans';src:url(OpenSans-Italic.ttf);font-weight:400;font-style:italic}
+@font-face{font-family:'Open Sans';src:url(OpenSans-SemiBold.ttf);font-weight:600}
+@font-face{font-family:'Open Sans';src:url(OpenSans-Bold.ttf);font-weight:700}
+:root{--red:#B4191E;--bright:#FF3333;--green:#00A155;--ink:#222;--grey:#666}
+@page{size:8.5in 11in;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:'Open Sans',Helvetica,Arial,sans-serif}
+.page{width:8.5in;height:11in;position:relative;padding:0.55in 0.75in 0.5in;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:flex-end}
+.mark{font-family:CafeMimi,serif;color:var(--red);font-size:50pt;line-height:1;letter-spacing:.5px;white-space:nowrap}
+.mark sup{font-family:'Open Sans';font-size:9pt;font-weight:700;vertical-align:top;position:relative;top:6pt;margin-left:2pt}
+.pill{display:inline-block;margin-top:7pt;background:var(--red);color:#fff;border-radius:7pt;padding:3pt 12pt;font-weight:700;font-size:9.5pt;letter-spacing:.2px}
+.contact{text-align:right;font-size:8.5pt;line-height:1.55;color:var(--ink);padding-bottom:3pt}
+.contact b{color:var(--red);font-weight:700}
+.contact .tag{display:inline-block;margin-top:3pt;color:var(--green);font-weight:700;font-size:8pt;letter-spacing:.4px}
+.wave{display:block;width:100%;height:14px;margin-top:12pt}
+main{flex:1;padding:26pt 0 0;font-size:10.5pt;line-height:1.55}
+main .date{margin-bottom:20pt}
+main p{margin:0 0 10pt}
+.sig{margin-top:22pt}
+.sig .name{font-family:CafeMimi,serif;color:var(--red);font-size:22pt;line-height:1.1;margin-top:14pt}
+footer{text-align:center;font-size:7.8pt;color:var(--grey);line-height:1.5}
+footer .ask{color:var(--bright);font-weight:700;font-size:8.6pt}
+footer .ask span{color:var(--green)}
+footer .wave{margin:0 0 7pt}
+</style></head><body>
+<div class="page">
+ <header id="lh-header">
+  <div>
+   <div class="mark">Cancer-A-Gogo<sup>TM</sup></div>
+   <div class="pill">Help cure cancer today &mdash; we are so close.</div>
+  </div>
+  <div class="contact">
+   <b>canceragogo.com</b><br>
+   info@canceragogo.com<br>
+   <span class="tag">501(c)(3) IRS APPROVED CHARITY</span>
+  </div>
+ </header>
+ <svg class="wave" id="wave-top" viewBox="0 0 700 14" preserveAspectRatio="none"><path id="wp" fill="none" stroke="#B4191E" stroke-width="2.2" stroke-linecap="round"/></svg>
+ <main>
+  <div class="date">November 9, 2026</div>
+  <p>Dear Friend,</p>
+  <p>Scientists and researchers are on the brink of major breakthroughs in the cancer world. Advances such as smarter drugs, new treatments, and life-saving immunotherapies put a cure closer than ever &mdash; and funding is particularly needed for childhood cancer research.</p>
+  <p>Your letter text goes here. This page shows the letterhead with sample body copy set in Open Sans, the same typeface used across canceragogo.com.</p>
+  <p>Thank you for helping us win this war.</p>
+  <div class="sig">With gratitude,<div class="name">Mac &amp; Piers McDowell</div><div style="font-size:9pt;color:var(--grey)">Co-founders, Cancer-A-Gogo</div></div>
+ </main>
+ <footer id="lh-footer">
+  <svg class="wave" viewBox="0 0 700 14" preserveAspectRatio="none"><path class="wp2" fill="none" stroke="#00A155" stroke-width="2.2" stroke-linecap="round"/></svg>
+  <div class="ask">£1 from every Briton <span>&bull;</span> $1 from every American <span>&bull;</span> All monies go directly to research</div>
+  <div>Founded by Mac and Piers McDowell with their late brother Errol McDowell to fund pediatric cancer research &middot; No overhead deducted</div>
+ </footer>
+</div>
+<script>
+// scalloped wave like the site's donate-button borders
+function wave(n){let d='M0 7';const w=700/n;for(let i=0;i<n;i++){const x=i*w;d+=` Q${x+w/4} ${i%2?13:1} ${x+w/2} 7 T${x+w} 7`;}return d}
+document.getElementById('wp').setAttribute('d',wave(46));
+document.querySelector('.wp2').setAttribute('d',wave(46));
+</script>
+</body></html>
